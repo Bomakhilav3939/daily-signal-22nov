@@ -125,17 +125,19 @@ def main():
     story_sub(0, _clean(news["stories"][1].get("summary", ""), 200))
 
     # fill remaining cards alternating columns
-    ci = 1
     for s in items:
         if s["n"] in (1, 3, 2):
             continue
+        ci = 0 if y[0] <= y[1] else 1  # kolom paling kosong dulu (balance)
+        if y[ci] > H - 430:
+            if y[1 - ci] <= H - 430:
+                ci = 1 - ci
+            else:
+                break
         story_head(ci, s.get("tier", "card"), hl(s), s.get("place"))
-        if y[ci] > H - 380:
-            break
-        ci = 1 - ci
 
     # ---- briefs ticker at bottom (single column, full width, no overlap) ----
-    yb = H - 288
+    yb = H - 262
     d.line((40, yb - 16, W - 40, yb - 16), fill=INK, width=3)
     d.text((40, yb - 10), "ALSO TODAY", font=f_region, fill=ACCENT)
     yb += 20
