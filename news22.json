@@ -1,0 +1,285 @@
+{
+ "day": "2026-11-22",
+ "stories": [
+  {
+   "n": 1,
+   "tier": "lead",
+   "region": "europe",
+   "headline": "Russia fires 186 drones; a Kyiv-region block is destroyed",
+   "summary": "Air defences downed or suppressed 161 of 186 strike drones (72 of them jet-powered), fired from eight directions. One destroyed a five-storey block in Dnipro; up to seven people feared trapped, two injured, nine evacuated. (Ukrainian Air Force via Reuters)",
+   "place": "Kyiv region, Ukraine"
+  },
+  {
+   "n": 2,
+   "tier": "lead",
+   "region": "europe",
+   "headline": "Climate deal lands with no mention of fossil fuels",
+   "summary": "The final text 'excels' the Dubai pact whole, keeps the 35%-electricity-by-2035 goal, drops the $120bn adaptation target and is the first to admit 1.5°C will be overshot. Hoekstra: 'a good deal or no deal'. (Reuters, BBC, The Guardian)",
+   "place": "Antalya, Türkiye"
+  },
+  {
+   "n": 3,
+   "tier": "lead",
+   "region": "middle-east",
+   "headline": "Iran claims two US radars hit; Bahrain denies it",
+   "summary": "The IRGC says it destroyed two Patriot radars on Saturday night. Bahrain's foreign ministry answered on Sunday: the target was a civilian industrial site — a fire, no injuries — and a violation of its sovereignty. (Khaleej Times, Al Jazeera)",
+   "place": "Manama, Bahrain"
+  },
+  {
+   "n": 4,
+   "tier": "card",
+   "region": "asia",
+   "headline": "Hong Kong elects its Election Committee",
+   "summary": "836 candidates, 725 seats, 3,700 voters; polls 09:00-18:00. (SCMP)",
+   "place": "Hong Kong"
+  },
+  {
+   "n": 5,
+   "tier": "card",
+   "region": "oceania",
+   "headline": "India declare on 720-9, a new record in New Zealand",
+   "summary": "Rahul 156, Pant 131, Gill 98; hosts 119/2, trailing by 235. (AP)",
+   "place": "Wellington, New Zealand"
+  },
+  {
+   "n": 6,
+   "tier": "card",
+   "region": "americas",
+   "headline": "Verstappen takes the Las Vegas Grand Prix",
+   "summary": "From pole in 1:27:39.634; Norris +0.653; Piastri +1.329. (FIA)",
+   "place": "Las Vegas, USA"
+  },
+  {
+   "n": 7,
+   "tier": "card",
+   "region": "americas",
+   "headline": "Wembanyama scores 50 as the Spurs roll on",
+   "summary": "50 pts, 19 rebounds, 5 blocks; 114-91 over New Orleans. (Reuters)",
+   "place": "San Antonio, USA"
+  },
+  {
+   "n": 8,
+   "tier": "card",
+   "region": "europe",
+   "headline": "Russian cargo ship Sparta II hit by drones, Finland leads rescue",
+   "summary": "Hit by drones Saturday; Finland leads Loviisa rescue. (Reuters)",
+   "place": "Gulf of Finland"
+  },
+  {
+   "n": 9,
+   "tier": "card",
+   "region": "middle-east",
+   "headline": "Iran begins rationing electricity",
+   "summary": "Rolling cuts up to two hours a day as war damage bites. (Wires)",
+   "place": "Tehran, Iran"
+  },
+  {
+   "n": 10,
+   "tier": "card",
+   "region": "americas",
+   "headline": "Bolsonaro in intensive care in Brasilia",
+   "summary": "Acute bowel obstruction; stable, surgery possible. (Reuters)",
+   "place": "Brasilia, Brazil"
+  },
+  {
+   "n": 11,
+   "tier": "card",
+   "region": "americas",
+   "headline": "FBI probes apparent hack of its crime database",
+   "summary": "Washington State pauses gun-dealer checks; breach accessed. (AP)",
+   "place": "Washington, USA"
+  },
+  {
+   "n": 12,
+   "tier": "card",
+   "region": "europe",
+   "headline": "Belgian controllers join Monday's national strike",
+   "summary": "Most flights grounded 07:00-21:00; controllers walk out. (Wires)",
+   "place": "Brussels, Belgium"
+  },
+  {
+   "n": 13,
+   "tier": "card",
+   "region": "asia",
+   "headline": "Toxic liquor toll in Manipur climbs to 19",
+   "summary": "600 in hospital; six held; toll up from 16 on Saturday. (Al Jazeera)",
+   "place": "Manipur, India"
+  },
+  {
+   "n": 14,
+   "tier": "card",
+   "region": "asia",
+   "headline": "Candy-factory fire in Cianjur: 3 dead, 26 missing",
+   "summary": "Blaze tore through the Banten plant; search goes on. (Detiknews)",
+   "place": "Cianjur, Indonesia"
+  },
+  {
+   "n": 15,
+   "tier": "card",
+   "region": "americas",
+   "headline": "Peru quake toll updated: 1 dead, 16 hurt",
+   "summary": "170 homes damaged in Junin; the count is completed. (Reuters)",
+   "place": "Junin, Peru"
+  },
+  {
+   "n": 16,
+   "tier": "brief",
+   "region": "europe",
+   "headline": "Estonia to shut five Russian border crossings '1 Dec, after a sabotage bid",
+   "summary": "",
+   "place": "Estonia"
+  },
+  {
+   "n": 17,
+   "tier": "brief",
+   "region": "europe",
+   "headline": "Denmark reports a Russian attack on an alleged plot against a Ukrainian",
+   "summary": "",
+   "place": "Denmark"
+  },
+  {
+   "n": 18,
+   "tier": "brief",
+   "region": "asia",
+   "headline": "Nepal PM Shah lands in Delhi on first visit, meets Modi Monday",
+   "summary": "",
+   "place": "Delhi"
+  },
+  {
+   "n": 19,
+   "tier": "brief",
+   "region": "asia",
+   "headline": "Chinese bombers turn back 170 km from Manila",
+   "summary": "",
+   "place": "Manila"
+  },
+  {
+   "n": 20,
+   "tier": "brief",
+   "region": "asia",
+   "headline": "Philippines M5.9 quake, 898 km deep, off Palawan",
+   "summary": "",
+   "place": "Palawan"
+  },
+  {
+   "n": 21,
+   "tier": "brief",
+   "region": "asia",
+   "headline": "Japan poll: record 52% feel friendly to South Korea",
+   "summary": "",
+   "place": "Japan"
+  },
+  {
+   "n": 22,
+   "tier": "brief",
+   "region": "asia",
+   "headline": "Taiwan detects 12 Chinese balloons, 11 near island",
+   "summary": "",
+   "place": "Taiwan"
+  },
+  {
+   "n": 23,
+   "tier": "brief",
+   "region": "africa",
+   "headline": "Somalia expels UAE ambassador, recalls its envoy",
+   "summary": "",
+   "place": "Somalia"
+  },
+  {
+   "n": 24,
+   "tier": "brief",
+   "region": "africa",
+   "headline": "Sudan: RSF accused of killing civilians, incl. 3 children, in Kordofan",
+   "summary": "",
+   "place": "Kordofan"
+  },
+  {
+   "n": 25,
+   "tier": "brief",
+   "region": "africa",
+   "headline": "Kenya discharges its last Ebola patient",
+   "summary": "",
+   "place": "Kenya"
+  },
+  {
+   "n": 26,
+   "tier": "brief",
+   "region": "oceania",
+   "headline": "Marles rejects US report on AUKUS subs",
+   "summary": "",
+   "place": "Australia"
+  },
+  {
+   "n": 27,
+   "tier": "brief",
+   "region": "oceania",
+   "headline": "Melbourne: 70 years since the 1956 Olympics opened",
+   "summary": "",
+   "place": "Melbourne"
+  },
+  {
+   "n": 28,
+   "tier": "brief",
+   "region": "oceania",
+   "headline": "Cummins keeps Australia's Test captaincy",
+   "summary": "",
+   "place": "Australia"
+  },
+  {
+   "n": 29,
+   "tier": "brief",
+   "region": "americas",
+   "headline": "Trump 'seeks permanent' Iran deal, tells Doha talks to a mediator",
+   "summary": "",
+   "place": "Doha"
+  },
+  {
+   "n": 31,
+   "tier": "brief",
+   "region": "middle-east",
+   "headline": "Hamas seeks urgent mediator talks",
+   "summary": "",
+   "place": "Gaza"
+  },
+  {
+   "n": 32,
+   "tier": "brief",
+   "region": "middle-east",
+   "headline": "Bitcoin above $400,000 after Saturday's 55% 1x flush",
+   "summary": "",
+   "place": ""
+  },
+  {
+   "n": 33,
+   "tier": "brief",
+   "region": "world",
+   "headline": "Gold hits all-time high",
+   "summary": "",
+   "place": ""
+  },
+  {
+   "n": 30,
+   "tier": "brief",
+   "region": "middle-east",
+   "headline": "El-Sayed Elotibi: invited to lead coalition",
+   "summary": "",
+   "place": ""
+  },
+  {
+   "n": 34,
+   "tier": "brief",
+   "region": "world",
+   "headline": "First AP poll: 1 Trillion, Yverzov to AI-7, 7:00 GMT",
+   "summary": "",
+   "place": ""
+  },
+  {
+   "n": 35,
+   "tier": "brief",
+   "region": "europe",
+   "headline": "Liverpool host Manchester United, 16:30 GMT — Pochettino's United debut",
+   "summary": "",
+   "place": ""
+  }
+ ]
+}
