@@ -102,7 +102,7 @@ def main():
     def story_sub(ci, text):
         x = col_x[ci]
         lines = wrap(d, text, f_body, col_w)
-        for ln in lines[:2]:
+        for ln in lines[:3]:
             d.text((x, y[ci]), ln, font=f_body, fill=MUTED)
             y[ci] += f_body.size + 3
         y[ci] += 10
