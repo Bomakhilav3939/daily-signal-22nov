@@ -99,7 +99,7 @@ for i, (tag, tcol, meta, head, body) in enumerate(LEADS):
     d.rectangle([x, y, x + box_w, y + 26], fill=NAVY)
     d.text((x + 10, y + 5), tag, font=font(SANS_B, 14), fill=(255, 255, 255))
     # simple flat illustration block
-    ix, iy, iw, ih = x + 14, y + 36, box_w - 28, 56
+    ix, iy, iw, ih = x + 14, y + 36, box_w - 28, 44
     d.rectangle([ix, iy, ix + iw, iy + ih], fill=(228, 224, 212))
     if tag == "WAR":  # night sky + drones
         d.rectangle([ix, iy, ix + iw, iy + ih], fill=(30, 34, 52))
@@ -117,23 +117,23 @@ for i, (tag, tcol, meta, head, body) in enumerate(LEADS):
         d.line([ix + 31, iy + 27, ix + 31, iy + 50], fill=(70, 80, 100), width=3)
         d.arc([ix + iw - 50, iy + 4, ix + iw - 4, iy + 50], 180, 360, fill=(70, 80, 100), width=3)
         d.ellipse([ix + iw - 36, iy + 19, ix + iw - 28, iy + 27], fill=RED)
-    d.text((x + 10, y + 98), meta, font=font(SANS_R, 12), fill=GRAY)
-    d.text((x + 10, y + 118), head, font=font(SERIF_B, 30), fill=INK, spacing=4)
-    d.text((x + 10, y + 240), body, font=font(SANS_R, 13), fill=(70, 70, 70), spacing=3)
+    d.text((x + 10, y + 86), meta, font=font(SANS_R, 12), fill=GRAY)
+    d.text((x + 10, y + 104), head, font=font(SERIF_B, 26), fill=INK, spacing=4)
+    d.text((x + 10, y + 212), body, font=font(SANS_R, 13), fill=(70, 70, 70), spacing=3)
 y += lead_h + 16
 
 # ---------- secondary cards (2 rows x 5) ----------
 CARDS = [
-    ("4", "CONFIRMED", GREEN, "HONG KONG", "Record turnout as Hong\nKong elects its committee", "836 candidates, 725 seats,\n98.37% of 3,700 voters. (SCMP)"),
-    ("5", "CONFIRMED", GREEN, "WELLINGTON", "India declare on 720-9,\na Test record", "Rahul 156, Pant 131, Gill 98;\nhosts 119/2, trail by 235. (AP)"),
-    ("6", "CONFIRMED", GREEN, "LAS VEGAS", "Verstappen wins the\nLas Vegas Grand Prix", "From pole in 1:27:39.634;\nNorris +0.653, Piastri +1.329. (FIA)"),
-    ("7", "CONFIRMED", GREEN, "SAN ANTONIO", "Wembanyama scores 50\nas the Spurs roll on", "50 pts, 19 rebounds, 5 blocks;\n114-91 over New Orleans. (Reuters)"),
-    ("8", "REPORTED", ORANGE, "GULF OF FINLAND", "Cargo ship Sparta II hit\nby drones; ablaze", "Finland leads the Loviisa\nrescue effort. (Reuters)"),
-    ("9", "REPORTED", ORANGE, "TEHRAN", "Iran begins rationing\nelectricity", "Rolling cuts up to two hours\na day as war damage bites. (Wires)"),
-    ("10", "REPORTED", ORANGE, "BRASILIA", "Bolsonaro in intensive\ncare in Brasilia", "Acute bowel obstruction;\nstable, surgery possible. (Reuters)"),
-    ("11", "REPORTED", ORANGE, "WASHINGTON", "FBI probes a hack of\nits crime database", "Washington State pauses\ngun-dealer checks. (AP)"),
-    ("12", "CONFIRMED", GREEN, "CIANJUR", "Candy-factory fire:\n3 dead, 26 missing", "Blaze tore through the plant;\nthe search goes on. (Detiknews)"),
-    ("13", "CONFIRMED", GREEN, "MANIPUR", "Toxic liquor toll\nclimbs to 19", "600 in hospital, six held;\ntoll up from Saturday. (Al Jazeera)"),
+    ("4", "CONFIRMED", GREEN, "HONG KONG", "Record turnout as\ncommittee elected", "836 candidates, 725\nseats, 98.37%. (SCMP)"),
+    ("5", "CONFIRMED", GREEN, "WELLINGTON", "India declare on\n720-9, a record", "Rahul 156, Pant 131,\nhosts trail 235. (AP)"),
+    ("6", "CONFIRMED", GREEN, "LAS VEGAS", "Verstappen wins\nLas Vegas GP", "From pole, 1:27:39.6;\nNorris +0.653. (FIA)"),
+    ("7", "CONFIRMED", GREEN, "SAN ANTONIO", "Wembanyama drops\n50 on Pelicans", "50 pts, 19 boards,\nSpurs win 114-91."),
+    ("8", "REPORTED", ORANGE, "GULF OF FINLAND", "Cargo Sparta II hit\nby drones, ablaze", "Finland leads the\nLoviisa rescue."),
+    ("9", "REPORTED", ORANGE, "TEHRAN", "Iran begins\npower rationing", "Rolling cuts, up to\ntwo hours a day."),
+    ("10", "REPORTED", ORANGE, "BRASILIA", "Bolsonaro in\nintensive care", "Bowel obstruction;\nstable, may need op."),
+    ("11", "REPORTED", ORANGE, "WASHINGTON", "FBI probes hack\nof crime database", "Washington State\npauses gun checks."),
+    ("12", "CONFIRMED", GREEN, "CIANJUR", "Candy-factory fire:\n3 dead, 26 missing", "Blaze tore through\nplant; search on."),
+    ("13", "CONFIRMED", GREEN, "MANIPUR", "Toxic liquor toll\nclimbs to 19", "600 in hospital,\nsix held."),
 ]
 card_h = 112
 card_w = (CW - 4 * 14) // 5
@@ -187,3 +187,17 @@ d.text((M + 120, y + 26), "Left out on purpose: events from Saturday 21 November
 
 img.save("/home/agentuser/workspace/makefun/entry-repo/entry.png", "PNG")
 print("rendered v6")
+
+# ---------- overflow guard: no text may exit the canvas ----------
+import sys
+px = img.load()
+bad = 0
+for yy in range(40, H):  # skip masthead strip (sengaja full-bleed 0-34)
+    for xx in range(W - 1, W - 12, -1):  # right 12px strip must be pure background
+        r, g, b = px[xx, yy]
+        if (r, g, b) not in (CREAM,):
+            bad += 1
+if bad:
+    print(f"GUARD: {bad} non-background pixels in right margin strip", file=sys.stderr)
+    sys.exit(1)
+print("guard: clean")
