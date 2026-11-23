@@ -16,13 +16,15 @@ SRC = os.path.join(os.path.dirname(os.path.abspath(__file__)), "entry.png")
 
 def main():
     out_dir = os.environ.get("MAKEFUN_OUTPUT_DIR", "/output")
-    os.makedirs(out_dir, exist_ok=True)
+    # The image is the deliverable: write the committed bytes exactly.
     with open(SRC, "rb") as f:
         data = f.read()
+    os.makedirs(out_dir, exist_ok=True)
     out = os.path.join(out_dir, "entry.png")
     with open(out, "wb") as f:
         f.write(data)
-    print("wrote", out, len(data), "bytes")
+    size = os.path.getsize(out)
+    print("wrote", out, size, "bytes")
 
 if __name__ == "__main__":
     main()
